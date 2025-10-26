@@ -1,0 +1,30 @@
+.auth-checking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: transparent;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+}
+
+.auth-spinner {
+  width: 54px;
+  height: 54px;
+  border: 5px solid rgba(255,255,255,0.12);
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.auth-checking p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}

@@ -1,0 +1,88 @@
+.profile-container {
+  min-height: 100vh;
+}
+
+.profile-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.profile-title {
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.profile-saved {
+  background: rgba(49, 208, 170, 0.15);
+  color: #7cf5d9;
+  border: 1px solid rgba(49,208,170,0.35);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.profile-form { display: flex; flex-direction: column; gap: 1rem; }
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.profile-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.profile-field label { color: var(--text-muted); font-weight: 700; }
+.profile-input {
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+.profile-input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--ring); }
+.profile-input:disabled { opacity: 0.65; }
+
+.profile-actions { display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 0.5rem; }
+.profile-btn {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.profile-btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid rgba(124,140,255,0.4);
+  border-radius: 12px;
+  padding: 0.75rem 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.profile-sticky-actions {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  background: linear-gradient(180deg, rgba(15,21,48,0), rgba(15,21,48,0.6));
+}
+
+@media (max-width: 768px) {
+  .profile-content { margin: 1rem; padding: 1.5rem; }
+}
+
+
